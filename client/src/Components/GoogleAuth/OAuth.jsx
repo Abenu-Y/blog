@@ -24,7 +24,7 @@ const OAuth = () => {
             const resultsFromGoogle = await signInWithPopup(auth,provider)
 
             const {displayName , email, photoURL} = resultsFromGoogle.user
-           
+            console.log(displayName)
 
             const res = await fetch('/api/auth/google',{
                 method:'post',
