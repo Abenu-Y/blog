@@ -5,6 +5,7 @@ import { Link, Navigate ,useNavigate} from 'react-router-dom'
 import {useDispatch,useSelector} from 'react-redux'
 import { signInStart,signInFailure,signInSuccess } from '../redux/User/userSlice'
 import OAuth from '../Components/GoogleAuth/oAuth'
+import GoogleAuth from '../Components/GoogleAuth/GoogleAuth'
 
 const SignIn = () => {
 
@@ -103,7 +104,7 @@ const SignIn = () => {
                             'Sign In'
                            }
                          </Button>
-                          <OAuth />
+                          <GoogleAuth />
                    </form>
                    <div className='flex gap-2 text-sm mt-5'>
                       <span>Dont Have an account ?</span>
