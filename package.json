@@ -5,9 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon Api/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Api/index.js",
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
