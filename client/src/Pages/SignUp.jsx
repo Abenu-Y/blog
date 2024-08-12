@@ -1,7 +1,6 @@
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react'
 import React, { useState } from 'react'
 import { Link, Navigate ,useNavigate} from 'react-router-dom'
-import OAuth from '../Components/GoogleAuth/oAuth'
 import GoogleAuth from '../Components/GoogleAuth/GoogleAuth'
 
 const SignUp = () => {
