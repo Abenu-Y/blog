@@ -106,10 +106,10 @@ function AddPost() {
     }
   };
   return (
-    <div className='p-3 max-w-3xl mx-auto min-h-screen'>
-      <h1 className='text-center text-3xl my-7 font-semibold'>Create a post</h1>
+    <div className='max-w-3xl min-h-screen p-3 mx-auto'>
+      <h1 className='text-3xl font-semibold text-center my-7'>Create a post</h1>
       <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
-        <div className='flex flex-col gap-4 sm:flex-row justify-between'>
+        <div className='flex flex-col justify-between gap-4 sm:flex-row'>
           <TextInput
             type='text'
             placeholder='Title'
@@ -125,6 +125,8 @@ function AddPost() {
               setFormData({ ...formData, category: e.target.value })
             }
           >
+
+
             <option value='uncategorized'>Select a category</option>
             <option value='javascript'>JavaScript</option>
             <option value='reactjs'>React.js</option>
@@ -132,7 +134,7 @@ function AddPost() {
             <option value='typescript'>Typescript</option>
           </Select>
         </div>
-        <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-double rounded-lg p-3'>
+        <div className='flex items-center justify-between gap-4 p-3 border-4 border-teal-500 border-double rounded-lg'>
           <FileInput
             type='file'
             accept='image/*'
@@ -163,13 +165,13 @@ function AddPost() {
           <img
             src={formData.image}
             alt='upload'
-            className='w-full h-72 object-cover'
+            className='object-cover w-full h-72'
           />
         )}
         <ReactQuill
           theme='snow'
           placeholder='Write something...'
-          className='h-72 mb-12'
+          className='mb-12 h-72'
           required
           modules={modules}
           formats={formats}
